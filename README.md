@@ -14,13 +14,12 @@ In the script when you have downloaded it there is a few things you need to edit
 	$smtpClient.Host = "smtp.email.com"   --------------> Change this to your personal SMTP server or corperate SMTP server
 	$smtpClient.Credentials = New-Object System.Net.NetworkCredential("username", "password")
 
-# Example BAT for launching powershell scripts
-{
-@echo off
-  @echo Launching XXX Application
-  start powershell -File "Path\XXX.ps1"
-  timeout 5
-  @echo Launching XXX Appplication
-  start powershell -File "Path\XXX.ps1"
-exit
-}
+# Example BAT for launching powershell scripts:
+
+	$@echo off
+	$@echo Launching XXX Application
+	$ start powershell -File "Path\XXX.ps1"
+	$timeout 5
+	$@echo Launching XXX Appplication
+	$start powershell -File "Path\XXX.ps1"
+	$exit
