@@ -7,6 +7,11 @@ When running the script you will need to input parameters into the command, if y
 # Example Powershell Command:
 	.\watchdogforfiles.ps1 -processName 'PROGRAMNAME' -interval '5' -notificationemail "EMAIL@MAIL.COM"
 
+# Auto Restart:
+As most watchdogs are just meant to listen the options to restart by default is disabled, you can enable them via having "-AutoRestart" in the command line
+
+	.\watchdogforfiles.ps1 -processName 'PROGRAMNAME' -interval '5' -notificationemail "EMAIL@MAIL.COM" -AutoRestart
+
 # EMAIL Setup
 In the script when you have downloaded it there is a few things you need to edit for this to work, edit the script and change the following lines:
 
@@ -28,8 +33,3 @@ This is for launching powershell scripts (the start powershell line can be input
 	Start XXX.exe
 	Start powershell "Path\XXX.ps1" -processName 'PROGRAMNAME' -interval '5' -notificationemail "EMAIL@MAIL.COM"
 	exit
-	
-# Auto Restart:
-As most watchdogs are just meant to listen the options to restart by default is disabled, you can enable them via having "-AutoRestart" in the command line
-
-	.\watchdogforfiles.ps1 -processName 'PROGRAMNAME' -interval '5' -notificationemail "EMAIL@MAIL.COM" -AutoRestart
